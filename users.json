@@ -1,0 +1,76 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "sky_walker",
+      "email": "sky.walker@example.com",
+      "desc": "Loves early mornings and long walks around the city. Always the first one to suggest a weekend trip.",
+      "avatar_url": "https://i.pravatar.cc/400?img=3",
+      "hobby": "Hiking"
+    },
+    {
+      "id": 2,
+      "username": "coffee_lover",
+      "email": "coffee.lover@example.com",
+      "desc": "Knows every coffee shop in District 1. Can tell a good espresso from a bad one in one sip.",
+      "avatar_url": "https://i.pravatar.cc/400?img=5",
+      "hobby": "Making coffee"
+    },
+    {
+      "id": 3,
+      "username": "pixel_artist",
+      "email": "pixel.artist@example.com",
+      "desc": "Draws tiny characters one pixel at a time. Dreams of making an indie game one day.",
+      "avatar_url": "https://i.pravatar.cc/400?img=8",
+      "hobby": "Pixel art"
+    },
+    {
+      "id": 4,
+      "username": "night_owl",
+      "email": "night.owl@example.com",
+      "desc": "Most productive after midnight. Has watched every sunrise from the wrong side of the night.",
+      "avatar_url": "https://i.pravatar.cc/400?img=11",
+      "hobby": "Stargazing"
+    },
+    {
+      "id": 5,
+      "username": "code_ninja",
+      "email": "code.ninja@example.com",
+      "desc": "Fixes bugs quietly and fast. Believes every problem has a clean solution somewhere.",
+      "avatar_url": "https://i.pravatar.cc/400?img=12",
+      "hobby": "Programming"
+    },
+    {
+      "id": 6,
+      "username": "green_leaf",
+      "email": "green.leaf@example.com",
+      "desc": "Keeps more plants than chairs at home. Talks to them every morning.",
+      "avatar_url": "https://i.pravatar.cc/400?img=20",
+      "hobby": "Gardening"
+    },
+    {
+      "id": 7,
+      "username": "music_box",
+      "email": "music.box@example.com",
+      "desc": "Always has headphones on. Makes chill lofi beats on a small keyboard.",
+      "avatar_url": "https://i.pravatar.cc/400?img=25",
+      "hobby": "Music production"
+    },
+    {
+      "id": 8,
+      "username": "travel_bug",
+      "email": "travel.bug@example.com",
+      "desc": "Has a map on the wall with pins for every city visited. Next stop: Japan.",
+      "avatar_url": "https://i.pravatar.cc/400?img=32",
+      "hobby": "Travelling"
+    },
+    {
+      "id": 9,
+      "username": "book_worm",
+      "email": "book.worm@example.com",
+      "desc": "Reads two books a week and remembers every plot twist. Never leaves home without a novel.",
+      "avatar_url": "https://i.pravatar.cc/400?img=47",
+      "hobby": "Reading"
+    }
+  ]
+}
