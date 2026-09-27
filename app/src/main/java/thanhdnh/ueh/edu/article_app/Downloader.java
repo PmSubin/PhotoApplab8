@@ -46,6 +46,11 @@ public class Downloader {
     return null;
   }
   public static void downloadWithProgress(String inputurl, Handler mainHandler, Context context, File where2store, ProgressBar progressBar, ImageView imageView) {
+    downloadWithProgress(inputurl, mainHandler, context, where2store, progressBar, imageView, null);
+  }
+
+  // Thêm tham số onDone: chạy sau khi tải xong (dùng để đọc file JSON)
+  public static void downloadWithProgress(String inputurl, Handler mainHandler, Context context, File where2store, ProgressBar progressBar, ImageView imageView, Runnable onDone) {
     OkHttpClient client = new OkHttpClient();
     Request request = new Request.Builder().url(inputurl).build();
 
@@ -60,11 +65,13 @@ public class Downloader {
       @Override
       public void onResponse(Call call, Response response) {
         if (!response.isSuccessful()) {
-          mainHandler.post(() -> {});
+          mainHandler.post(() -> progressBar.setVisibility(ProgressBar.INVISIBLE));
           return;
         }
 
         long totalBytes = response.body().contentLength();
+        // Server không báo dung lượng (-1) thì cho thanh tiến trình chạy liên tục
+        if (totalBytes <= 0) mainHandler.post(() -> progressBar.setIndeterminate(true));
         InputStream inputStream = response.body().byteStream();
         String contentType = response.header("Content-Type", "");
         String extension = getExtensionFromMimeType(contentType);
@@ -77,18 +84,23 @@ public class Downloader {
           while ((bytesRead = inputStream.read(buffer)) != -1) {
             outputStream.write(buffer, 0, bytesRead);
             downloadedBytes += bytesRead;
-            int progress = (int) ((downloadedBytes * 100) / totalBytes);
-            mainHandler.post(() -> progressBar.setProgress(progress));
+            if (totalBytes > 0) {
+              int progress = (int) ((downloadedBytes * 100) / totalBytes);
+              mainHandler.post(() -> progressBar.setProgress(progress));
+            }
           }
           outputStream.flush();
 
           mainHandler.post(() -> {
             cached_file_path = where2store + "/downloaded_file" + extension;
-            imageView.setImageURI(Uri.parse(cached_file_path));
+            if (imageView != null)
+              imageView.setImageURI(Uri.parse(cached_file_path));
             progressBar.setVisibility(ProgressBar.INVISIBLE);
+            if (onDone != null)
+              onDone.run();
           });
         } catch (Exception e) {
-          mainHandler.post(() -> {});
+          mainHandler.post(() -> progressBar.setVisibility(ProgressBar.INVISIBLE));
         }
       }
     });

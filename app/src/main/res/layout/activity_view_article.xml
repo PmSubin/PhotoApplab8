@@ -12,30 +12,62 @@
     android:orientation="vertical"
     android:padding="15px">
 
-    <ImageView
-      android:id="@+id/iv_detail"
-      android:layout_width="match_parent"
-      android:layout_height="500dp"
-      tools:srcCompat="@tools:sample/avatars" />
-
-    <TextView
-      android:id="@+id/tv_detail_title"
+    <!-- Hàng trên: thông tin bên trái, avatar bên phải (theo hình trên bảng) -->
+    <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_gravity="center"
-      android:fontFamily="cursive"
-      android:padding="15px"
-      android:text="Title"
-      android:textAlignment="center"
-      android:textColor="#00E5FF"
-      android:textSize="20sp"
-      android:textStyle="bold" />
+      android:orientation="horizontal">
+
+      <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+          android:id="@+id/tv_detail_title"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:fontFamily="cursive"
+          android:padding="15px"
+          android:text="Username"
+          android:textColor="#00E5FF"
+          android:textSize="20sp"
+          android:textStyle="bold" />
+
+        <TextView
+          android:id="@+id/tv_detail_email"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="15px"
+          android:text="Email"
+          android:textColor="@color/white"
+          android:textSize="14sp" />
+
+        <TextView
+          android:id="@+id/tv_detail_hobby"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="15px"
+          android:text="Hobby"
+          android:textColor="@color/white"
+          android:textSize="14sp" />
+      </LinearLayout>
+
+      <ImageView
+        android:id="@+id/iv_detail"
+        android:layout_width="160dp"
+        android:layout_height="200dp"
+        tools:srcCompat="@tools:sample/avatars" />
+    </LinearLayout>
 
     <TextView
       android:id="@+id/tv_detail_description"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:fontFamily="casual"
+      android:paddingTop="30px"
       android:paddingBottom="50px"
       android:text="Description"
       android:textColor="#FF9100"

@@ -5,11 +5,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ProgressBar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
   public GridView gridview;
+  public ProgressBar progressBar;
 
   private AdapterView.OnItemClickListener onitemclick = new AdapterView.OnItemClickListener() {
     @Override
@@ -27,7 +29,8 @@ public class MainActivity extends AppCompatActivity {
     getSupportActionBar().hide();
 
     gridview = findViewById(R.id.gridview);
-    new ArticleData(getBaseContext(), gridview).loadData("https://raw.githubusercontent.com/thanhdnh/json/main/products.json", this);
+    progressBar = findViewById(R.id.progressBar);
+    new ArticleData(getBaseContext(), gridview, progressBar).loadData("https://raw.githubusercontent.com/PmSubin/PhotoApplab8/master/users.json", this);
     gridview.setOnItemClickListener(onitemclick);
   }
 

@@ -10,7 +10,7 @@ import com.squareup.picasso.Picasso;
 
 public class ViewArticleActivity extends AppCompatActivity {
   ImageView iv_detail;
-  TextView tv_detail_title, tv_detail_description;
+  TextView tv_detail_title, tv_detail_description, tv_detail_email, tv_detail_hobby;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -21,11 +21,15 @@ public class ViewArticleActivity extends AppCompatActivity {
     iv_detail = findViewById(R.id.iv_detail);
     tv_detail_title = findViewById(R.id.tv_detail_title);
     tv_detail_description = findViewById(R.id.tv_detail_description);
+    tv_detail_email = findViewById(R.id.tv_detail_email);
+    tv_detail_hobby = findViewById(R.id.tv_detail_hobby);
 
     int id = (int) getIntent().getLongExtra("id", 0);
 
-    Picasso.get().load(ArticleData.getPhotoFromId(id).getArticle_image()).resize(400, 500).centerCrop().into(iv_detail);
-    tv_detail_title.setText(ArticleData.getPhotoFromId(id).getArticle_title());
-    tv_detail_description.setText(ArticleData.getPhotoFromId(id).getArticle_description());
+    Picasso.get().load(ArticleData.getPhotoFromId(id).getAvatar_url()).resize(400, 500).centerCrop().into(iv_detail);
+    tv_detail_title.setText(ArticleData.getPhotoFromId(id).getUsername());
+    tv_detail_description.setText(ArticleData.getPhotoFromId(id).getDesc());
+    tv_detail_email.setText("Email: " + ArticleData.getPhotoFromId(id).getEmail());
+    tv_detail_hobby.setText("Hobby: " + ArticleData.getPhotoFromId(id).getHobby());
   }
 }

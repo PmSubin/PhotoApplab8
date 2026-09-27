@@ -3,6 +3,9 @@ package thanhdnh.ueh.edu.article_app;
 import android.app.Activity;
 import android.content.Context;
 import android.widget.GridView;
+import android.os.Handler;
+import android.os.Looper;
+import android.widget.ProgressBar;
 import com.google.gson.Gson;
 import java.io.BufferedReader;
 import java.io.File;
@@ -14,33 +17,37 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class ArticleData {
-  public static ArticleList data;
+  public static UserList data;
   private Context context;
   private GridView gridview;
+  private ProgressBar progressBar;
   private final ExecutorService executor = Executors.newSingleThreadExecutor();
 
-  public ArticleData(Context context, GridView gridview) {
+  public ArticleData(Context context, GridView gridview, ProgressBar progressBar) {
     this.context = context;
     this.gridview = gridview;
+    this.progressBar = progressBar;
   }
 
-  public static Article getPhotoFromId(int id) {
-    for (int i = 0; i < data.getArticles().size(); i++)
-      if (data.getArticles().get(i).getArticle_id() == id)
-        return data.getArticles().get(i);
+  public static UserProfile getPhotoFromId(int id) {
+    for (int i = 0; i < data.getUsers().size(); i++)
+      if (data.getUsers().get(i).getId() == id)
+        return data.getUsers().get(i);
     return null;
   }
 
   public void loadData(String url, Activity activity){
       executor.execute(()->{
-          File file = Downloader.downloadFile(url, context.getCacheDir());
-          if(file!=null)
-            activity.runOnUiThread(()->{
-              Gson gson = new Gson();
-              data = gson.fromJson(readText(file), (Type) ArticleList.class);
-              ArticleAdapter adapter = new ArticleAdapter(data.getArticles(), context);
-              gridview.setAdapter(adapter);
-            });
+          Downloader.downloadWithProgress(url, new Handler(Looper.getMainLooper()), context, context.getCacheDir(), progressBar, null, ()->{
+            File file = new File(Downloader.cached_file_path);
+            if(file.exists())
+              activity.runOnUiThread(()->{
+                Gson gson = new Gson();
+                data = gson.fromJson(readText(file), (Type) UserList.class);
+                ArticleAdapter adapter = new ArticleAdapter(data.getUsers(), context);
+                gridview.setAdapter(adapter);
+              });
+          });
         });
   }
 
