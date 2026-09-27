@@ -4,73 +4,73 @@
       "id": 1,
       "username": "sky_walker",
       "email": "sky.walker@example.com",
-      "desc": "Loves early mornings and long walks around the city. Always the first one to suggest a weekend trip.",
+      "desc": "Thích dậy sớm và đi dạo quanh thành phố. Luôn là người đầu tiên rủ cả nhóm đi chơi cuối tuần.",
       "avatar_url": "https://i.pravatar.cc/400?img=3",
-      "hobby": "Hiking"
+      "hobby": "Leo núi"
     },
     {
       "id": 2,
       "username": "coffee_lover",
       "email": "coffee.lover@example.com",
-      "desc": "Knows every coffee shop in District 1. Can tell a good espresso from a bad one in one sip.",
+      "desc": "Biết hết các quán cà phê ở Quận 1. Chỉ cần một ngụm là phân biệt được espresso ngon hay dở.",
       "avatar_url": "https://i.pravatar.cc/400?img=5",
-      "hobby": "Making coffee"
+      "hobby": "Pha cà phê"
     },
     {
       "id": 3,
       "username": "pixel_artist",
       "email": "pixel.artist@example.com",
-      "desc": "Draws tiny characters one pixel at a time. Dreams of making an indie game one day.",
+      "desc": "Vẽ từng nhân vật nhỏ xíu bằng từng điểm ảnh. Mơ ước một ngày tự làm game indie của riêng mình.",
       "avatar_url": "https://i.pravatar.cc/400?img=8",
-      "hobby": "Pixel art"
+      "hobby": "Vẽ pixel art"
     },
     {
       "id": 4,
       "username": "night_owl",
       "email": "night.owl@example.com",
-      "desc": "Most productive after midnight. Has watched every sunrise from the wrong side of the night.",
+      "desc": "Làm việc hiệu quả nhất sau nửa đêm. Đã ngắm bình minh không biết bao nhiêu lần vì... chưa đi ngủ.",
       "avatar_url": "https://i.pravatar.cc/400?img=11",
-      "hobby": "Stargazing"
+      "hobby": "Ngắm sao"
     },
     {
       "id": 5,
       "username": "code_ninja",
       "email": "code.ninja@example.com",
-      "desc": "Fixes bugs quietly and fast. Believes every problem has a clean solution somewhere.",
+      "desc": "Sửa lỗi nhanh và lặng lẽ. Tin rằng vấn đề nào cũng có một cách giải gọn gàng.",
       "avatar_url": "https://i.pravatar.cc/400?img=12",
-      "hobby": "Programming"
+      "hobby": "Lập trình"
     },
     {
       "id": 6,
       "username": "green_leaf",
       "email": "green.leaf@example.com",
-      "desc": "Keeps more plants than chairs at home. Talks to them every morning.",
+      "desc": "Trồng nhiều chậu cây hơn số ghế trong nhà. Sáng nào cũng trò chuyện với từng chậu.",
       "avatar_url": "https://i.pravatar.cc/400?img=20",
-      "hobby": "Gardening"
+      "hobby": "Làm vườn"
     },
     {
       "id": 7,
       "username": "music_box",
       "email": "music.box@example.com",
-      "desc": "Always has headphones on. Makes chill lofi beats on a small keyboard.",
+      "desc": "Lúc nào cũng đeo tai nghe. Hay làm nhạc lofi nhẹ nhàng trên chiếc keyboard nhỏ.",
       "avatar_url": "https://i.pravatar.cc/400?img=25",
-      "hobby": "Music production"
+      "hobby": "Làm nhạc"
     },
     {
       "id": 8,
       "username": "travel_bug",
       "email": "travel.bug@example.com",
-      "desc": "Has a map on the wall with pins for every city visited. Next stop: Japan.",
+      "desc": "Treo bản đồ trên tường, ghim đánh dấu mọi thành phố đã đi qua. Điểm đến tiếp theo: Nhật Bản.",
       "avatar_url": "https://i.pravatar.cc/400?img=32",
-      "hobby": "Travelling"
+      "hobby": "Du lịch"
     },
     {
       "id": 9,
       "username": "book_worm",
       "email": "book.worm@example.com",
-      "desc": "Reads two books a week and remembers every plot twist. Never leaves home without a novel.",
+      "desc": "Mỗi tuần đọc hai cuốn sách và nhớ hết mọi tình tiết bất ngờ. Ra đường không bao giờ quên mang theo tiểu thuyết.",
       "avatar_url": "https://i.pravatar.cc/400?img=47",
-      "hobby": "Reading"
+      "hobby": "Đọc sách"
     }
   ]
 }
