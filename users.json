@@ -6,7 +6,7 @@
       "email": "sky.walker@example.com",
       "desc": "Thích dậy sớm và đi dạo quanh thành phố. Luôn là người đầu tiên rủ cả nhóm đi chơi cuối tuần.",
       "avatar_url": "https://i.pravatar.cc/400?img=3",
-      "hobby": "Leo núi"
+      "hobby": "Leo núi, Đi dạo, Chụp ảnh"
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "email": "coffee.lover@example.com",
       "desc": "Biết hết các quán cà phê ở Quận 1. Chỉ cần một ngụm là phân biệt được espresso ngon hay dở.",
       "avatar_url": "https://i.pravatar.cc/400?img=5",
-      "hobby": "Pha cà phê"
+      "hobby": "Pha cà phê, Đọc sách, Nghe nhạc jazz"
     },
     {
       "id": 3,
@@ -22,7 +22,7 @@
       "email": "pixel.artist@example.com",
       "desc": "Vẽ từng nhân vật nhỏ xíu bằng từng điểm ảnh. Mơ ước một ngày tự làm game indie của riêng mình.",
       "avatar_url": "https://i.pravatar.cc/400?img=8",
-      "hobby": "Vẽ pixel art"
+      "hobby": "Vẽ pixel art, Chơi game, Làm game"
     },
     {
       "id": 4,
@@ -30,7 +30,7 @@
       "email": "night.owl@example.com",
       "desc": "Làm việc hiệu quả nhất sau nửa đêm. Đã ngắm bình minh không biết bao nhiêu lần vì... chưa đi ngủ.",
       "avatar_url": "https://i.pravatar.cc/400?img=11",
-      "hobby": "Ngắm sao"
+      "hobby": "Ngắm sao, Xem phim, Viết nhật ký"
     },
     {
       "id": 5,
@@ -38,7 +38,7 @@
       "email": "code.ninja@example.com",
       "desc": "Sửa lỗi nhanh và lặng lẽ. Tin rằng vấn đề nào cũng có một cách giải gọn gàng.",
       "avatar_url": "https://i.pravatar.cc/400?img=12",
-      "hobby": "Lập trình"
+      "hobby": "Lập trình, Giải đố, Chơi cờ vua"
     },
     {
       "id": 6,
@@ -46,7 +46,7 @@
       "email": "green.leaf@example.com",
       "desc": "Trồng nhiều chậu cây hơn số ghế trong nhà. Sáng nào cũng trò chuyện với từng chậu.",
       "avatar_url": "https://i.pravatar.cc/400?img=20",
-      "hobby": "Làm vườn"
+      "hobby": "Làm vườn, Nấu ăn, Tập yoga"
     },
     {
       "id": 7,
@@ -54,7 +54,7 @@
       "email": "music.box@example.com",
       "desc": "Lúc nào cũng đeo tai nghe. Hay làm nhạc lofi nhẹ nhàng trên chiếc keyboard nhỏ.",
       "avatar_url": "https://i.pravatar.cc/400?img=25",
-      "hobby": "Làm nhạc"
+      "hobby": "Làm nhạc, Chơi guitar, Nghe nhạc lofi"
     },
     {
       "id": 8,
@@ -62,7 +62,7 @@
       "email": "travel.bug@example.com",
       "desc": "Treo bản đồ trên tường, ghim đánh dấu mọi thành phố đã đi qua. Điểm đến tiếp theo: Nhật Bản.",
       "avatar_url": "https://i.pravatar.cc/400?img=32",
-      "hobby": "Du lịch"
+      "hobby": "Du lịch, Chụp ảnh, Học tiếng Nhật"
     },
     {
       "id": 9,
@@ -70,7 +70,7 @@
       "email": "book.worm@example.com",
       "desc": "Mỗi tuần đọc hai cuốn sách và nhớ hết mọi tình tiết bất ngờ. Ra đường không bao giờ quên mang theo tiểu thuyết.",
       "avatar_url": "https://i.pravatar.cc/400?img=47",
-      "hobby": "Đọc sách"
+      "hobby": "Đọc sách, Viết truyện, Uống trà"
     }
   ]
 }
