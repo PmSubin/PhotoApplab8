@@ -65,13 +65,11 @@ public class Downloader {
       @Override
       public void onResponse(Call call, Response response) {
         if (!response.isSuccessful()) {
-          mainHandler.post(() -> progressBar.setVisibility(ProgressBar.INVISIBLE));
+          mainHandler.post(() -> {});
           return;
         }
 
         long totalBytes = response.body().contentLength();
-        // Server không báo dung lượng (-1) thì cho thanh tiến trình chạy liên tục
-        if (totalBytes <= 0) mainHandler.post(() -> progressBar.setIndeterminate(true));
         InputStream inputStream = response.body().byteStream();
         String contentType = response.header("Content-Type", "");
         String extension = getExtensionFromMimeType(contentType);
@@ -84,10 +82,8 @@ public class Downloader {
           while ((bytesRead = inputStream.read(buffer)) != -1) {
             outputStream.write(buffer, 0, bytesRead);
             downloadedBytes += bytesRead;
-            if (totalBytes > 0) {
-              int progress = (int) ((downloadedBytes * 100) / totalBytes);
-              mainHandler.post(() -> progressBar.setProgress(progress));
-            }
+            int progress = (int) ((downloadedBytes * 100) / totalBytes);
+            mainHandler.post(() -> progressBar.setProgress(progress));
           }
           outputStream.flush();
 
@@ -100,7 +96,7 @@ public class Downloader {
               onDone.run();
           });
         } catch (Exception e) {
-          mainHandler.post(() -> progressBar.setVisibility(ProgressBar.INVISIBLE));
+          mainHandler.post(() -> {});
         }
       }
     });
