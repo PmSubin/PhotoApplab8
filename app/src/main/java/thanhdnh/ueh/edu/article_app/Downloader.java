@@ -45,10 +45,6 @@ public class Downloader {
     }
     return null;
   }
-  public static void downloadWithProgress(String inputurl, Handler mainHandler, Context context, File where2store, ProgressBar progressBar, ImageView imageView) {
-    downloadWithProgress(inputurl, mainHandler, context, where2store, progressBar, imageView, null);
-  }
-
   // Thêm tham số onDone: chạy sau khi tải xong (dùng để đọc file JSON)
   public static void downloadWithProgress(String inputurl, Handler mainHandler, Context context, File where2store, ProgressBar progressBar, ImageView imageView, Runnable onDone) {
     OkHttpClient client = new OkHttpClient();
